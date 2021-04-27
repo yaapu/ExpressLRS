@@ -18,8 +18,10 @@ SECTIONS
   ram_code = LOADADDR(.ram_code);
   .ram_code :
   {
-    . = ALIGN(4);
+    /* Vectors must be 512 bytes (128 words) aligned */
+    . = ALIGN(512);
     ram_code_start = .;
+    /* NOTE: Keep vectors first! */
     KEEP(*(.isr_vector))
     *(.ram_code)
     *(.ram_code*)
