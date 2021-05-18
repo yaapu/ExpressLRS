@@ -118,6 +118,9 @@ typedef enum
     CRSF_FRAMETYPE_MSP_REQ = 0x7A,   // response request using msp sequence as command
     CRSF_FRAMETYPE_MSP_RESP = 0x7B,  // reply with 58 byte chunked binary
     CRSF_FRAMETYPE_MSP_WRITE = 0x7C, // write with 8 byte chunked binary (OpenTX outbound telemetry buffer limit)
+    // CUSTOM frames
+    CRSF_FRAMETYPE_AP_CUSTOM_TELEM = 0x7F, //reserved for ArduPilot by TBS
+    //CRSF_FRAMETYPE_AP_CUSTOM_TELEM = 0x80, //reserved for ArduPilot by TBS
 } crsf_frame_type_e;
 
 enum {
@@ -132,7 +135,8 @@ enum {
     CRSF_FRAME_ATTITUDE_PAYLOAD_SIZE = 6,
     CRSF_FRAME_DEVICE_INFO_PAYLOAD_SIZE = 48,
     CRSF_FRAME_FLIGHT_MODE_PAYLOAD_SIZE = 10,
-    CRSF_FRAME_MSP_RESP_PAYLOAD_SIZE = CRSF_EXT_FRAME_SIZE(CRSF_FRAME_TX_MSP_FRAME_SIZE)
+    CRSF_FRAME_MSP_RESP_PAYLOAD_SIZE = CRSF_EXT_FRAME_SIZE(CRSF_FRAME_TX_MSP_FRAME_SIZE),
+    CRSF_FRAME_AP_CUSTOM_TELEM_PAYLOAD_SIZE = 52,
 };
 
 typedef enum

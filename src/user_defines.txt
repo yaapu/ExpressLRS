@@ -17,7 +17,7 @@
 ### REGULATORY DOMAIN: ###
 
 #-DRegulatory_Domain_AU_915
-#-DRegulatory_Domain_EU_868
+-DRegulatory_Domain_EU_868
 #-DRegulatory_Domain_AU_433
 #-DRegulatory_Domain_EU_433
 #-DRegulatory_Domain_FCC_915
@@ -26,7 +26,7 @@
 
 ### SWITCHES: ###
 
-#-DHYBRID_SWITCHES_8
+-DHYBRID_SWITCHES_8
 
 
 ### PERFORMANCE OPTIONS: ###
@@ -62,7 +62,7 @@
 #-DUSE_500HZ
 
 # Comment this to disable advanced telemetry.
-#-DENABLE_TELEMETRY
+-DENABLE_TELEMETRY
 
 #Comment this to disable diversity function
 #-DUSE_DIVERSITY
